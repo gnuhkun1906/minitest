@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label><strong> Năm sinh Dương Lịch</strong></label>
+    <input type="number" min="1" id="yearOld" onclick="cLut()"><br><br>
+    <button type="button" onclick="batMan()">Result</button>
+    <br> <br>
+    <label><strong> Tuổi:   </strong></label>
+    <p><b id="result"></b>&nbsp<b id="confirm"></b></p>
+</form>
+<script>
+    function batMan() {
+        let year = +document.getElementById("yearOld").value;
+        let Can = year % 10;
+        let Chi = year % 12;
+
+        switch (Can) {
+            case 0:
+                document.getElementById("result").innerHTML = 'Canh';
+                break;
+            case 1:
+                document.getElementById("result").innerHTML = 'Thân';
+                break;
+            case 2:
+                document.getElementById("result").innerHTML = 'Nhâm';
+                break;
+            case 3:
+                document.getElementById("result").innerHTML = 'Quý';
+                break;
+            case 4:
+                document.getElementById("result").innerHTML = 'Giáp';
+                break;
+            case 5:
+                document.getElementById("result").innerHTML = 'Ất';
+                break;
+            case 6:
+                document.getElementById("result").innerHTML = 'Bính';
+                break;
+            case 7:
+                document.getElementById("result").innerHTML = 'Đinh';
+                break;
+            case 8:
+                document.getElementById("result").innerHTML = 'Mậu';
+                break;
+            case 9:
+                document.getElementById("result").innerHTML = 'Kỷ';
+                break;
+        }
+        switch (Chi) {
+            case 0:
+                document.getElementById("confirm").innerHTML = 'Thân';
+                break;
+            case 1:
+                document.getElementById("confirm").innerHTML = 'Dậu';
+                break;
+            case 2:
+                document.getElementById("confirm").innerHTML = 'Tuất';
+                break;
+            case 3:
+                document.getElementById("confirm").innerHTML = 'Hợi';
+                break;
+            case 4:
+                document.getElementById("confirm").innerHTML = 'Tý';
+                break;
+            case 5:
+                document.getElementById("confirm").innerHTML = 'Sửu';
+                break;
+            case 6:
+                document.getElementById("confirm").innerHTML = 'Dần';
+                break;
+            case 7:
+                document.getElementById("confirm").innerHTML = 'Mão';
+                break;
+            case 8:
+                document.getElementById("confirm").innerHTML = 'Thìn';
+                break;
+            case 9:
+                document.getElementById("confirm").innerHTML = 'Tỵ';
+                break;
+            case 10:
+                document.getElementById("confirm").innerHTML = 'Ngọ';
+                break;
+            case 11:
+                document.getElementById("confirm").innerHTML = 'Mùi';
+                break;
+        }
+    }
+</script>
+</body>
+</html>

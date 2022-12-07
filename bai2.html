@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label><strong>Cạnh a</strong></label>
+    <input type="number" min="1" id="canhA"> <br> <br>
+    <label><strong>Cạnh b</strong></label>
+    <input type="number" min="1" id="canhB"> <br> <br>
+    <label><strong>Cạnh c</strong></label>
+    <input type="number" min="1" id="canhC"> <br> <br>
+    <button type="button" id="result" onclick="Click()"> Result</button>
+    <br> <br>
+    <h1 id="ketQua"></h1>
+</form>
+<script>
+    function Click() {
+        let a = +document.getElementById('canhA').value;
+        let b = +document.getElementById('canhB').value;
+        let c = +document.getElementById('canhC').value;
+        if (a * a == b * b + c * c || b * b == a * a + c * c || c * c == a * a + b * b) {
+            document.getElementById('ketQua').innerHTML = 'đây là tam giác vuông';
+        } else if (a + b > c && b + c > a && a + c > b) {
+            document.getElementById('ketQua').innerHTML = 'đây là 1 tam giác';
+        } else {
+            document.getElementById('ketQua').innerHTML = 'đây không phải là 1 tam giác';
+        }
+    }
+
+</script>
+</body>
+</html>

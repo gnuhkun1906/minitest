@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label> <strong>Tuổi em</strong></label>
+    <input type="number" id="ageEm" min="1"> <br> <br>
+    <button type="button" id="result" onclick="Results()">Change</button>
+    <br> <br>
+    <label> <strong>Tuổi anh</strong></label>
+    <input type="text" id="ageAnh"> <br> <br>
+    <label> <strong>Tuổi bố</strong></label>
+    <input type="text" id="ageBo">
+</form>
+<script>
+    function Results(){
+        let X=+document.getElementById("ageEm").value;
+        let Y=3+X;
+        let Z=6*Y;
+        document.getElementById("ageAnh").value=''+Y;
+        document.getElementById("ageBo").value=''+Z;
+    }
+</script>
+</body>
+</html>
